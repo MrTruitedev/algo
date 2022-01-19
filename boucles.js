@@ -233,19 +233,19 @@ for (let i = 0; i < 10; i++) {
 // 6 5
 // 6 6
 console.log("Exercice 10");
-for(let i=1 ; i<7 ; i++){
-    for(let j=1 ; j<7 ; j++){
-    console.log(i,j);
+for (let i = 1; i < 7; i++) {
+    for (let j = 1; j < 7; j++) {
+        console.log(i, j);
     }
 }
 
 
 // Exercice 11 : adapter l'exercice précédent pour enlever les doublons (on ne veut pas afficher 1 2 et 2 1, mais seulement l'un des deux).
 console.log("Exercice 11");
-for(let i=1 ; i<7 ; i++){
-    for(let j=1 ; j<7 ; j++){
-        if(i<=j){
-    console.log(i,j);
+for (let i = 1; i < 7; i++) {
+    for (let j = 1; j < 7; j++) {
+        if (i <= j) {
+            console.log(i, j);
         }
     }
 }
@@ -254,10 +254,10 @@ for(let i=1 ; i<7 ; i++){
 // Exercice 12 : en prenant des dés à 20 faces, combien de résultats différents (sans doublon) peut-on afficher ? (Autrement dit : adapter le code précédent pour compter les résultats au lieu de les afficher)
 console.log("Exercice 12");
 let result = 1;
-for(let i=1 ; i<21 ; i++){
-    for(let j=1 ; j<21 ; j++){
-        if(i<=j){
-    result ++;
+for (let i = 1; i < 21; i++) {
+    for (let j = 1; j < 21; j++) {
+        if (i <= j) {
+            result++;
         }
     }
 }
@@ -274,10 +274,10 @@ console.log(result);
 // 1x8 = 8
 // 1x9 = 9
 console.log("Exercice 13");
-for(let i=1; i<2 ; i++){
-    for(let j=1 ; j<10 ; j++){
-        let result13 = i*j;
-        console.log(i,"x",j, "=", result13);
+for (let i = 1; i < 2; i++) {
+    for (let j = 1; j < 10; j++) {
+        let result13 = i * j;
+        console.log(i, "x", j, "=", result13);
     }
 }
 
@@ -292,10 +292,10 @@ for(let i=1; i<2 ; i++){
 // 2x8 = 16
 // 2x9 = 18
 console.log("Exercice 14");
-for(let i=2; i<3 ; i++){
-    for(let j=1 ; j<10 ; j++){
-        let result13 = i*j;
-        console.log(i,"x",j, "=", result13);
+for (let i = 2; i < 3; i++) {
+    for (let j = 1; j < 10; j++) {
+        let result13 = i * j;
+        console.log(i, "x", j, "=", result13);
     }
 }
 
@@ -309,30 +309,30 @@ for(let i=2; i<3 ; i++){
 // 9x8 = 72
 // 9x9 = 81
 console.log("Exercice 15");
-for(let i=1; i<10 ; i++){
-    for(let j=1 ; j<10 ; j++){
-        let result13 = i*j;
-        console.log(i,"x",j, "=", result13);
+for (let i = 1; i < 10; i++) {
+    for (let j = 1; j < 10; j++) {
+        let result13 = i * j;
+        console.log(i, "x", j, "=", result13);
     }
 }
 
 // Exercice 16 : calculer 1+2+3+4+...+99+100. (Vous devriez trouver 5050)
 console.log("Exercice 16");
 let result16 = 1;
-for(let i=1 ; i<100 ; i++){
+for (let i = 1; i < 100; i++) {
     result16++;
     result16 = i + result16;
 }
-    console.log(result16);
+console.log(result16);
 // Exercice 17 : trouver le nombre n tel que 1+2+3+4+5+...+(n-1)+n = 302253
 console.log("Exercice 17");
-let result17 =1;
+let result17 = 1;
 let resultb = 1;
-while (resultb<302253){
+while (resultb < 302253) {
     result17++;
     resultb = resultb + result17;
 }
-    console.log(resultb);
+console.log(resultb);
 
 // Exercice 18 : Afficher :
 // 1
@@ -346,35 +346,26 @@ while (resultb<302253){
 // 34
 // 55
 console.log("Exercice 18");
+let x = 0;
+var y = 1;
 let result18 = 0;
-let g = 1;
-let k = 1;
-for(let i=0 ; i<10 ; i++){
-    if(i == 0){
-        result18 = result18 + g;
-        console.log(result18);
-    }else if(i == 1){
-        console.log(result18);
-    }else if(i == 3){
-        result18 = result18 +(result18);
-        console.log(result18);
-    }else{
-        result18 = result18 +(result18-k);
-        console.log(result18);
-        k++;
-    }
+for (let i = 0; i < 10; i++) {
+    
+    x = y;
+    y = result18;
+    result18 = x + y;
+    console.log(result18);
 }
-
 
 
 // Exercice 19 : compter combien il y a de nombres multiples de 3 ou de 7 entre 1234 et 5678
 console.log("Exercice 19");
 let result19 = 0;
-for(let i=1234 ; i<5679 ; i++){
-    if(i%3 == 0){
-        result19 ++;
-    }else if(i%7 == 0){
-        result19 ++;
+for (let i = 1234; i < 5679; i++) {
+    if (i % 3 == 0) {
+        result19++;
+    } else if (i % 7 == 0) {
+        result19++;
     }
 }
 console.log(result19);
